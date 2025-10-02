@@ -3,7 +3,9 @@ const mixedArray = ['PIZZA', 10, true, 25, false, 'Wings']
 const lowerCaseWords = (arr) => {
   return new Promise((resolve, reject) => {
     const filteredArray = [];
+    // example delay imitating what you normally do with a promise
     setTimeout(() => {
+      // validation example
       if (!Array.isArray(arr)) {
         reject(`Given type is not a valid array: ${typeof arr}`);
         return;
@@ -25,5 +27,5 @@ lowerCaseWords(mixedArray)
     console.log(r);
   })
   .catch(error => {
-    console.error('Error:', error);
+    console.error('Error: ', error);
   });
